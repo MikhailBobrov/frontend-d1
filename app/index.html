@@ -9,18 +9,18 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="main-header">
+    <header class="main-header main-header__container">
         <nav class="main-nav">
             <a class="main-nav__logo">
                 <img class="header__logo-image" src="images/src/logo.svg" alt="Иконка логотипа">
             </a>
 
-            <form id="main-nav__form" action="#" method="post">
-                <input type="text" name="main-nav__form-name" id="reservation-form-name" placeholder="Поиск">
-                <label for="reservation-form-name" class="visually-hidden">Найти</label>
+            <form class="main-nav__form" id="main-nav__form" action="#" method="post">
+                <input class="main-nav__input" type="search" name="main-nav__form-name" id="reservation-form-name" placeholder="Поиск...">
+                <label class="main-nav__label" for="reservation-form-name" >Найти</label>
             </form>
 
-            <a class="main-nav__button button-enter" href="#">Войти</a>
+            <a class="button main-nav__button button-enter" href="#">Войти</a>
 
             <div class="main-nav__authorized">
                 <p class="main-nav__authorized-name">Константин К.</p>
@@ -95,6 +95,12 @@
     <footer class="main-footer">
         <section class="contacts">
             <h2 class="visually-hidden">Наши контакты</h2>
+            <img src="images/src/htc-cs-logo.svg" width="32" height="64" alt="иконка логотипа">
+            <p class="contacts__adress">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+            <a class="contacts__phone" id="phone" href="tel:+7 (3412) 93-88-61, 43-29-29">+7 (3412) 93-88-61, 43-29-29</a>
+            <address>
+                <a href="htc-cs.ru">htc-cs.ru</a>
+            </address>
         </section>
     </footer>
 <script src="js/app.min.js"></script>
