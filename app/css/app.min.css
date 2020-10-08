@@ -341,17 +341,9 @@ input[type=radio].visually-hidden {
   padding-bottom: 15px
 }
 .new__item {
-  padding: 1rem;
+  padding: 10px;
   max-width: 30rem;
-  position: relative;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: background .1s ease,-webkit-transform .3s ease-in-out,-webkit-box-shadow .4s ease;
-  transition: background .1s ease,-webkit-transform .3s ease-in-out,-webkit-box-shadow .4s ease;
-  -o-transition: transform .3s ease-in-out,box-shadow .4s ease,background .1s ease;
-  transition: transform .3s ease-in-out,box-shadow .4s ease,background .1s ease;
-  transition: transform .3s ease-in-out,box-shadow .4s ease,background .1s ease,-webkit-transform .3s ease-in-out,-webkit-box-shadow .4s ease;
-  overflow: hidden
+  position: relative
 }
 .new__item .new__item-link {
   position: relative;
@@ -375,33 +367,27 @@ input[type=radio].visually-hidden {
 }
 .new__item .new__item-text {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 30px;
+  width: 259px;
+  height: 343px;
   top: 50%;
-  left: 0;
-  text-align: center;
+  left: 11px;
+  text-align: left;
   background: rgba(0,0,0,.8);
   opacity: 0;
   -webkit-transition: .5s;
   -o-transition: .5s;
-  transition: .5s
+  transition: .5s;
+  border-radius: 7px
 }
 .new__item:hover .new__item-text {
-  top: 0;
-  opacity: 1
+  top: 11px;
+  opacity: 1;
+  cursor: pointer
 }
 .new__item .new__item-text p {
   color: #fff;
   font-family: Rubik,Arial,sans-serif;
   font-size: 14px;
-  margin: 0 0 20px 0
-}
-.new__item:focus-within,
-.new__item:hover {
-  -webkit-box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
-  box-shadow: 0 1rem 1rem rgba(0,0,0,.3);
-  -webkit-transform: translateY(-.5rem);
-  -ms-transform: translateY(-.5rem);
-  transform: translateY(-.5rem)
+  margin: 0 0 20px 0;
+  padding: 10px 10px
 }
