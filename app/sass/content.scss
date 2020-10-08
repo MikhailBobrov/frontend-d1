@@ -1,0 +1,24 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.content__container {
+  margin: 0 auto;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content-films {
+  font-weight: 500;
+}
+
+.content-channels {
+  font-weight: 500;
+}
+
+.content__active {
+  color: var(--basic-red);
+  border-bottom: 1px solid var(--basic-red);
+}
