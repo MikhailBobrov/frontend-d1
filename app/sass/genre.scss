@@ -1,0 +1,84 @@
+.genre {
+  margin: 0 auto;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.genre__title {
+  margin: 0;
+  font-weight: 500;
+  color: #333333;
+  font-size: 24px;
+}
+
+.genre__list {
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.genre__item {
+  position: relative;
+  margin-bottom: 10px;
+  opacity: .9;
+}
+
+.genre__item:hover,
+.genre__item:focus {
+  box-shadow: 0 -1rem 1rem rgba(0,0,0,-0.7);
+  transform: translateY(-0.5rem);
+  background: transparent;
+  opacity: 1;
+}
+
+.genre__item--comedy::before {
+  content: "Комедии";
+  position: absolute;
+  top: 168px;
+  left: 100px;
+  width: 100%;
+  min-height: 60px;
+  color: var(--basic-white);
+}
+
+.genre__item--comedy::after {
+  content: "";
+  position: absolute;
+  top: 94px;
+  left: 114px;
+  width: 48px;
+  min-height: 49px;
+  background-image: url("../images/src/happy-smyle.svg");
+}
+
+.genre__item--dram::before {
+  content: "Драмы";
+  position: absolute;
+  top: 168px;
+  left: 111px;
+  width: 100%;
+  min-height: 60px;
+  color: var(--basic-white);
+}
+
+.genre__item--fantastic::before {
+  content: "Фантастика";
+  position: absolute;
+  top: 168px;
+  left: 88px;
+  width: 100%;
+  min-height: 60px;
+  color: var(--basic-white);
+}
+
+.genre__item--scary::before {
+  content: "Ужасы";
+  position: absolute;
+  top: 168px;
+  left: 112px;
+  width: 100%;
+  min-height: 60px;
+  color: var(--basic-white);
+}
+

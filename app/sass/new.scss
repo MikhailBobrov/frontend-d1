@@ -6,10 +6,22 @@
 }
 
 .new__title {
+  position: relative;
   margin: 0;
+  padding-left: 35px;
   font-weight: 500;
   color: #333333;
   font-size: 24px;
+}
+
+.new__title::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 27px;
+  min-height: 25px;
+  background-image: url("../images/src/fire.svg");
 }
 
 .new__list {
