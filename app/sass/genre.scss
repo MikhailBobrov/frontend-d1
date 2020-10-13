@@ -50,6 +50,7 @@
   width: 48px;
   min-height: 49px;
   background-image: url("../images/src/happy-smyle.svg");
+  background-repeat: no-repeat;
 }
 
 .genre__item--dram::before {
@@ -62,6 +63,17 @@
   color: var(--basic-white);
 }
 
+.genre__item--dram::after {
+  content: "";
+  position: absolute;
+  top: 94px;
+  left: 114px;
+  width: 48px;
+  min-height: 49px;
+  background-image: url("../images/src/cry-smile.svg");
+  background-repeat: no-repeat;
+}
+
 .genre__item--fantastic::before {
   content: "Фантастика";
   position: absolute;
@@ -72,6 +84,17 @@
   color: var(--basic-white);
 }
 
+.genre__item--fantastic::after {
+  content: "";
+  position: absolute;
+  top: 94px;
+  left: 114px;
+  width: 48px;
+  min-height: 49px;
+  background-image: url("../images/src/alien.svg");
+  background-repeat: no-repeat;
+}
+
 .genre__item--scary::before {
   content: "Ужасы";
   position: absolute;
@@ -80,5 +103,16 @@
   width: 100%;
   min-height: 60px;
   color: var(--basic-white);
+}
+
+.genre__item--scary::after {
+  content: "";
+  position: absolute;
+  top: 94px;
+  left: 114px;
+  width: 48px;
+  min-height: 49px;
+  background-image: url("../images/src/scary-movie.svg");
+  background-repeat: no-repeat;
 }
 

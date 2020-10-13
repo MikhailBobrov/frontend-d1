@@ -169,7 +169,6 @@ html {
 img {
   -o-object-fit: contain;
   object-fit: contain;
-  max-width: 100%;
   height: auto
 }
 .visually-hidden:not(:focus):not(:active),
@@ -451,7 +450,8 @@ input[type=radio].visually-hidden {
   left: 114px;
   width: 48px;
   min-height: 49px;
-  background-image: url(../images/src/happy-smyle.svg)
+  background-image: url(../images/src/happy-smyle.svg);
+  background-repeat: no-repeat
 }
 .genre__item--dram::before {
   content: "Драмы";
@@ -462,6 +462,16 @@ input[type=radio].visually-hidden {
   min-height: 60px;
   color: var(--basic-white)
 }
+.genre__item--dram::after {
+  content: "";
+  position: absolute;
+  top: 94px;
+  left: 114px;
+  width: 48px;
+  min-height: 49px;
+  background-image: url(../images/src/cry-smile.svg);
+  background-repeat: no-repeat
+}
 .genre__item--fantastic::before {
   content: "Фантастика";
   position: absolute;
@@ -471,6 +481,16 @@ input[type=radio].visually-hidden {
   min-height: 60px;
   color: var(--basic-white)
 }
+.genre__item--fantastic::after {
+  content: "";
+  position: absolute;
+  top: 94px;
+  left: 114px;
+  width: 48px;
+  min-height: 49px;
+  background-image: url(../images/src/alien.svg);
+  background-repeat: no-repeat
+}
 .genre__item--scary::before {
   content: "Ужасы";
   position: absolute;
@@ -479,4 +499,92 @@ input[type=radio].visually-hidden {
   width: 100%;
   min-height: 60px;
   color: var(--basic-white)
+}
+.genre__item--scary::after {
+  content: "";
+  position: absolute;
+  top: 94px;
+  left: 114px;
+  width: 48px;
+  min-height: 49px;
+  background-image: url(../images/src/scary-movie.svg);
+  background-repeat: no-repeat
+}
+.main-footer {
+  background-color: #f2f2f2
+}
+.contacts {
+  margin: 0 auto;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.contacts__adress {
+  font-size: 14px;
+  padding-left: 10px;
+  color: var(--basic-black)
+}
+.main-footer__logo {
+  padding-top: 40px;
+  width: 32px;
+  height: 64px;
+  -o-object-fit: contain;
+  object-fit: contain
+}
+.contacts__phone {
+  padding-left: 10px;
+  font-size: 14px;
+  color: var(--basic-black)
+}
+.contacts__site {
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1f4766;
+  font-style: normal
+}
+.channels {
+  margin: 0 auto;
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px
+}
+.channels-list {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+.channels-list__item {
+  background-color: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+.first__channel {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  background-color: #f2f2f2
+}
+.first__channel-1 {
+  width: 114px;
+  height: 65px
+}
+.first__channel-menu-header {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--basic-black)
+}
+.first__channel-menu-time {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--basic-black)
+}
+.first__channel-menu-program {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--basic-black)
 }
