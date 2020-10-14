@@ -214,29 +214,30 @@
         </section>
     </footer>
 
-<!--    <section class="modal modal-login">-->
-<!--        <h3>Напишите нам</h3>-->
-<!--        <form class="feedback-form" action="#" method="post">-->
-<!--            <div class="feedback-container">-->
-<!--                <p class="feedback-option">-->
-<!--                    <label class="feedback-label" for="user-login">Ваше имя</label>-->
-<!--                    <input class="feedback-field" id="user-login" type="text" name="login" value="" placeholder="Имя Фамилия">-->
-<!--                </p>-->
-<!--                <p class="feedback-option">-->
-<!--                    <label class="feedback-label" for="user-email">Ваш e-mail</label>-->
-<!--                    <input class="feedback-field" id="user-email" type="email" name="email" value="" placeholder="email@exaple.com">-->
-<!--                </p>-->
-<!--            </div>-->
-<!--            <p class="feedback-option">-->
-<!--                <label class="feedback-label" for="login-text">Текст письма</label>-->
-<!--                <textarea class="feedback-field" id="login-text" placeholder="В свободной форме"></textarea>-->
-<!--            </p>-->
-<!--            <button class="modal-button button" type="submit">Отправить</button>-->
-<!--        </form>-->
-<!--        <button class="popup-close" type="button">-->
-<!--            <span class="visually-hidden">Закрыть</span>-->
-<!--        </button>-->
-<!--    </section>-->
+    <section class="modal modal-login">
+        <h3>Вход</h3>
+        <form class="feedback-form" action="#" method="post">
+            <div class="feedback-container">
+                <p class="feedback-option">
+                    <label class="feedback-label visually-hidden" for="user-login">Логин</label>
+                    <input class="feedback-field" id="user-login" type="text" name="login" value="" placeholder="Логин">
+                </p>
+                <p class="feedback-option">
+                    <label class="feedback-label visually-hidden" for="user-password">Пароль</label>
+                    <input class="feedback-field" id="user-password" type="password" name="password" value="" placeholder="Пароль">
+                </p>
+            </div>
+            <div class="filter-checkbox">
+                <input class="visually-hidden checkbox-input" type="checkbox" name="filters-form" id="filters-form" checked value="remember">
+                <label class="checkbox-label" for="filters-form">Запомнить</label>
+            </div>
+            <a class="button modal-button" href="#">Войти</a>
+        </form>
+        <button class="popup-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
+    </section>
+
 <script src="js/app.min.js"></script>
 </body>
 </html>
