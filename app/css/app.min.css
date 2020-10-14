@@ -261,6 +261,12 @@ input[type=radio].visually-hidden {
   --special-light: #afe63a;
   --special-extra-light: #c6f523
 }
+.tabs__item {
+  display: none
+}
+.tabs__item.active {
+  display: block
+}
 .main-header {
   padding-top: 28px;
   width: 100%;
@@ -302,15 +308,17 @@ input[type=radio].visually-hidden {
 }
 .content__container {
   margin: 0 auto;
+  margin-bottom: 10px;
   width: 320px;
   padding-left: 20px;
   padding-right: 20px
 }
-.content-films {
-  font-weight: 500
-}
-.content-channels {
-  font-weight: 500
+.content__con {
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: 0
 }
 .content__active {
   color: var(--basic-red);
@@ -523,7 +531,7 @@ input[type=radio].visually-hidden {
   display: flex
 }
 .contacts__adress {
-  font-size: 14px;
+  font-size: 12px;
   padding-left: 10px;
   color: var(--basic-black)
 }
@@ -536,12 +544,15 @@ input[type=radio].visually-hidden {
 }
 .contacts__phone {
   padding-left: 10px;
-  font-size: 14px;
+  font-size: 12px;
   color: var(--basic-black)
 }
 .contacts__site {
+  padding-top: 10px;
   padding-left: 10px;
-  font-size: 14px;
+  padding-right: 10px;
+  padding-bottom: 25px;
+  font-size: 12px;
   font-weight: 500;
   color: #1f4766;
   font-style: normal
@@ -550,7 +561,8 @@ input[type=radio].visually-hidden {
   margin: 0 auto;
   width: 320px;
   padding-left: 20px;
-  padding-right: 20px
+  padding-right: 20px;
+  margin-bottom: 25px
 }
 .channels-list {
   list-style: none;
@@ -561,30 +573,56 @@ input[type=radio].visually-hidden {
   background-color: #f2f2f2;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex
+  display: flex;
+  margin-bottom: 15px
 }
 .first__channel {
+  padding-left: 5px;
+  padding-top: 50px;
+  padding-right: 15px;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
   background-color: #f2f2f2
 }
 .first__channel-1 {
-  width: 114px;
+  width: 50px;
   height: 65px
 }
 .first__channel-menu-header {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 400;
-  color: var(--basic-black)
+  color: var(--basic-black);
+  font-weight: 500;
+  color: #333
 }
 .first__channel-menu-time {
-  font-size: 14px;
+  padding-right: 12px;
+  padding-bottom: 5px;
+  font-size: 12px;
   font-weight: 400;
-  color: var(--basic-black)
+  color: var(--basic-black);
+  text-align: left
 }
 .first__channel-menu-program {
-  font-size: 14px;
+  width: 132px;
+  font-size: 12px;
   font-weight: 400;
-  color: var(--basic-black)
+  color: var(--basic-black);
+  margin: 0;
+  padding-right: 10px;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap
+}
+.first__channel-menu-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+.active {
+  color: red
 }

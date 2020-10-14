@@ -3,6 +3,7 @@
   width: 320px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 25px;
 }
 
 .channels-list {
@@ -14,33 +15,57 @@
 .channels-list__item {
   background-color: #F2F2F2;
   display: flex;
+  margin-bottom: 15px;
 }
 
 .first__channel {
+  padding-left: 5px;
+  padding-top: 50px;
+  padding-right: 15px;
   align-self: center;
   background-color: #F2F2F2;
 }
 
 .first__channel-1 {
-  width: 114px;
+  width: 50px;
   height: 65px;
 }
 
 .first__channel-menu-header {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: normal;
   color: var(--basic-black);
+  font-weight: 500;
+  color: #333333;
 }
 
 .first__channel-menu-time {
-  font-size: 14px;
+  padding-right: 12px;
+  padding-bottom: 5px;
+  font-size: 12px;
   font-weight: normal;
   color: var(--basic-black);
+  text-align: left;
 }
 
 .first__channel-menu-program {
-  font-size: 14px;
+  width: 132px;
+  font-size: 12px;
   font-weight: normal;
   color: var(--basic-black);
+  margin: 0;
+  padding-right: 10px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.first__channel-menu-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.active {
+  color: red;
 }
 

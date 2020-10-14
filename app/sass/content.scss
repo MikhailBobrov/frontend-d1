@@ -5,17 +5,18 @@
 
 .content__container {
   margin: 0 auto;
+  margin-bottom: 10px;
   width: 320px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.content-films {
+.content__con {
   font-weight: 500;
-}
-
-.content-channels {
-  font-weight: 500;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
 }
 
 .content__active {

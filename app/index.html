@@ -36,11 +36,11 @@
 
         <section class="content content__container">
             <h2 class="visually-hidden">Категории</h2>
-            <p class="content-films content__active">Фильмы</p>
-            <p class="content-channels">Телеканалы</p>
+            <button class="content__con content__active" data-tab="#tab-1">Фильмы</button>
+            <button class="content__con" data-tab="#tab-2">Телеканалы</button>
         </section>
 
-        <div class="films">
+        <div class="films tabs__item" id="tab-1">
             <section class="new">
                 <h2 class="new__title">	Новинки</h2>
                 <ul class="new__list">
@@ -110,7 +110,7 @@
             </section>
         </div>
 
-        <div class="channels">
+        <div class="channels tabs__item" id="tab-2">
             <ul class="channels-list">
                 <li class="channels-list__item">
                     <a class="first__channel">
@@ -119,11 +119,76 @@
 
                     <div class="first__channel-menu">
                         <h3 class="first__channel-menu-header">Первый канал</h3>
-                        <dl>
-                            <dt class="first__channel-menu-time">13:00</dt><dd class="first__channel-menu-program">Новости (с субтитрами)</dd>
-                            <dt>14:00</dt><dd>Давай поженимся</dd>
-                            <dt>15:00</dt><dd>Другие новости</dd>
-                        </dl>
+                        <table class="first__channel-block">
+                            <tr class="first__channel-menu-content">
+                                <td class="first__channel-menu-time active">13:00</td>
+                                <td class="first__channel-menu-program active">Новости (с субтитрами)</td>
+                                <td class="first__channel-menu-time">14:00</td>
+                                <td class="first__channel-menu-program">Давай поженимся</td>
+                                <td class="first__channel-menu-time">15:00</td>
+                                <td class="first__channel-menu-program">Другие новости</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+
+                <li class="channels-list__item">
+                    <a class="first__channel">
+                        <img class="first__channel-1" src="images/src/22channel.png" alt="2x2">
+                    </a>
+
+                    <div class="first__channel-menu">
+                        <h3 class="first__channel-menu-header">2x2</h3>
+                        <table class="first__channel-block">
+                            <tr class="first__channel-menu-content">
+                                <td class="first__channel-menu-time active">13:00</td>
+                                <td class="first__channel-menu-program active">МУЛЬТ ТВ. Сезон 4, 7 серия</td>
+                                <td class="first__channel-menu-time">14:00</td>
+                                <td class="first__channel-menu-program">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</td>
+                                <td class="first__channel-menu-time">15:00</td>
+                                <td class="first__channel-menu-program">БУРДАШЕВ. Сезон 1, 20 серия</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+
+                <li class="channels-list__item">
+                    <a class="first__channel">
+                        <img class="first__channel-1" src="images/src/rbc.png" alt="РБК">
+                    </a>
+
+                    <div class="first__channel-menu">
+                        <h3 class="first__channel-menu-header">РБК</h3>
+                        <table class="first__channel-block">
+                            <tr class="first__channel-menu-content">
+                                <td class="first__channel-menu-time active">13:00</td>
+                                <td class="first__channel-menu-program active">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</td>
+                                <td class="first__channel-menu-time">14:00</td>
+                                <td class="first__channel-menu-program">ДЕНЬ. Главные темы</td>
+                                <td class="first__channel-menu-time">15:00</td>
+                                <td class="first__channel-menu-program">Главные новости</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+
+                <li class="channels-list__item">
+                    <a class="first__channel">
+                        <img class="first__channel-1" src="images/src/Amedia.png" alt="AMEDIA PREMIUM">
+                    </a>
+
+                    <div class="first__channel-menu">
+                        <h3 class="first__channel-menu-header">AMEDIA PREMIUM</h3>
+                        <table class="first__channel-block">
+                            <tr class="first__channel-menu-content">
+                                <td class="first__channel-menu-time active">13:00</td>
+                                <td class="first__channel-menu-program active">Клиент всегда мёртв</td>
+                                <td class="first__channel-menu-time">14:00</td>
+                                <td class="first__channel-menu-program">Голодные игры: Сойка-пересмешница. Часть I</td>
+                                <td class="first__channel-menu-time">15:00</td>
+                                <td class="first__channel-menu-program">Секс в большом городе</td>
+                            </tr>
+                        </table>
                     </div>
                 </li>
 
@@ -148,6 +213,30 @@
             </div>
         </section>
     </footer>
+
+<!--    <section class="modal modal-login">-->
+<!--        <h3>Напишите нам</h3>-->
+<!--        <form class="feedback-form" action="#" method="post">-->
+<!--            <div class="feedback-container">-->
+<!--                <p class="feedback-option">-->
+<!--                    <label class="feedback-label" for="user-login">Ваше имя</label>-->
+<!--                    <input class="feedback-field" id="user-login" type="text" name="login" value="" placeholder="Имя Фамилия">-->
+<!--                </p>-->
+<!--                <p class="feedback-option">-->
+<!--                    <label class="feedback-label" for="user-email">Ваш e-mail</label>-->
+<!--                    <input class="feedback-field" id="user-email" type="email" name="email" value="" placeholder="email@exaple.com">-->
+<!--                </p>-->
+<!--            </div>-->
+<!--            <p class="feedback-option">-->
+<!--                <label class="feedback-label" for="login-text">Текст письма</label>-->
+<!--                <textarea class="feedback-field" id="login-text" placeholder="В свободной форме"></textarea>-->
+<!--            </p>-->
+<!--            <button class="modal-button button" type="submit">Отправить</button>-->
+<!--        </form>-->
+<!--        <button class="popup-close" type="button">-->
+<!--            <span class="visually-hidden">Закрыть</span>-->
+<!--        </button>-->
+<!--    </section>-->
 <script src="js/app.min.js"></script>
 </body>
 </html>
