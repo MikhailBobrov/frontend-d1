@@ -284,6 +284,18 @@ input[type=radio].visually-hidden {
   color: red;
   font-size: 16px
 }
+.main-nav__button {
+  margin-top: 20px
+}
+.main-nav__authorized {
+  display: block
+}
+.button-out {
+  display: none
+}
+.button-on {
+  display: block
+}
 .content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,6 +305,7 @@ input[type=radio].visually-hidden {
 }
 .content__container {
   margin: 0 auto;
+  margin-top: 20px;
   margin-bottom: 10px;
   width: 320px;
   padding-left: 20px;

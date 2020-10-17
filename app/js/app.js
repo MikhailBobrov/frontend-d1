@@ -97,3 +97,36 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
+/**
+ * 1. скачать урок основы ввода данных 2.0
+ * 2. скачать урок работам с формами 2.0
+ * 3. localStorage урок 2.0
+ */
+
+console.log(login);
+console.log(password);
+const authorizedName = document.querySelector('#authorized');//поле куда выводится Логин
+
+
+function output() {
+    let loginData = login.value;
+    let passwordData = password.value;
+    login.value = ''
+    // authorizedName.textContent = loginData;
+    localStorage.setItem('login', JSON.stringify(loginData));
+
+    //получит стродж и передать его в переменную и эту переменную добавит в html
+    let inf = localStorage.getItem('login');
+    inf = JSON.parse(inf);
+
+    let out = document.querySelector('.main-nav__authorized');
+    out.append(inf);
+    out.value = ' ';
+
+
+}
+
+
+
+document.querySelector(".modal-button").onclick = output;
+
