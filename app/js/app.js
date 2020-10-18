@@ -111,22 +111,23 @@ const authorizedName = document.querySelector('#authorized');//поле куда
 function output() {
     let loginData = login.value;
     let passwordData = password.value;
-    login.value = ''
+    login.value = '';
     // authorizedName.textContent = loginData;
-    localStorage.setItem('login', JSON.stringify(loginData));
+    localStorage.setItem('login', loginData);
 
-    //получит стродж и передать его в переменную и эту переменную добавит в html
+
     let inf = localStorage.getItem('login');
-    inf = JSON.parse(inf);
 
-    let out = document.querySelector('.main-nav__authorized');
+    let out = document.querySelector('.main-nav__authorized-out');
     out.append(inf);
     out.value = ' ';
-
-
 }
 
+function updateData () {
 
-
+}
 document.querySelector(".modal-button").onclick = output;
+window.onload = function() {
+    updateData();
+};
 
