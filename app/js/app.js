@@ -121,8 +121,8 @@ window.addEventListener("keydown", function (evt) {
  */
 
 
-const authorizedName = document.querySelector('.main-nav__authorized');//див над инпутом
-const authorizedOut = document.querySelector('.main-nav__authorized-out'); //инпут
+const loginView = document.querySelector('.main-nav__authorized');//див над инпутом
+const loginInput = document.querySelector('.main-nav__authorized-out'); //инпут
 
 function output() {
     let loginData = login.value;
@@ -130,22 +130,34 @@ function output() {
     localStorage.setItem('login', loginData);
 
     let inf = localStorage.getItem('login');
-    authorizedName.innerHTML = inf;
+    loginView.innerHTML = inf;
 };
 
-authorizedName.addEventListener('click', function () {
-    authorizedOut.value = authorizedName.innerHTML
-});
-debugger;
-
-authorizedOut.addEventListener('change', function () {
-    authorizedName.innerText = authorizedOut.value;
-});
-debugger
-
-
 document.querySelector(".modal-button").onclick = output;
-// window.onload = function() {
-//     updateData();
-// };
+
+loginView.addEventListener('click', function () {
+    loginInput.classList.add('main-nav__authorized-outoblock');
+    loginInput.value = loginView.innerHTML;
+    this.classList.add('main-nav__authorizedout')
+});
+
+
+loginInput.addEventListener('change', function () {
+    loginInput.innerText = loginInput.value;
+    loginInput.classList.remove('main-nav__authorized-outoblock');
+    loginView.classList.remove('main-nav__authorizedout');
+});
+
+function updateData () {
+    let loginData = login.value;
+    localStorage.setItem('login', loginData);
+    let info = localStorage.getItem('login');
+    loginView.innerHTML = info;
+    loginInput.value = info;
+}
+
+window.onload = function() {
+    updateData();
+};
+
 

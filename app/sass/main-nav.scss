@@ -19,13 +19,20 @@
 
 .main-nav__authorized {
   display: block;
+}
 
+.main-nav__authorizedout {
+  display: none;
 }
 
 .main-nav__authorized-out {
   border: none;
-
+  display: none;
   outline: none;
+}
+
+.main-nav__authorized-outoblock {
+  display: block;
 }
 
 .button-out {

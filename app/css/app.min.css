@@ -290,9 +290,16 @@ input[type=radio].visually-hidden {
 .main-nav__authorized {
   display: block
 }
+.main-nav__authorizedout {
+  display: none
+}
 .main-nav__authorized-out {
   border: none;
+  display: none;
   outline: 0
+}
+.main-nav__authorized-outoblock {
+  display: block
 }
 .button-out {
   display: none
@@ -660,7 +667,7 @@ input[type=radio].visually-hidden {
   padding-left: 20px;
   padding-right: 20px;
   width: 280px;
-  min-height: 590px;
+  min-height: 390px;
   -webkit-animation-name: bounce;
   animation-name: bounce;
   -webkit-animation-duration: .6s;
