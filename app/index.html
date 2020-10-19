@@ -22,11 +22,10 @@
 
             <a class="button main-nav__button button-enter" href="#">Войти</a>
 
-            <div class="main-nav__authorized">
-                <input type="text" name="login" value="" placeholder="" class="main-nav__authorized-out" id="authorized"></input>
-<!--                <a class="main-nav__authorized-button button-out" href="#">Выйти</a>-->
+            <div class="authorized">
+                <div class="main-nav__authorized" id="userName"></div>
+                <input type="text" class="main-nav__authorized-out" id="authorized" name="login" value="" placeholder=""></input>
             </div>
-
 
         </nav>
     </header>
@@ -220,11 +219,11 @@
             <div class="feedback-container">
                 <p class="feedback-option">
                     <label class="feedback-label visually-hidden" for="user-login">Логин</label>
-                    <input class="feedback-field" id="user-login" type="text" name="login" value="" placeholder="Логин">
+                    <input class="feedback-field" id="user-login" type="text" name="login" value="" placeholder="Логин" required>
                 </p>
                 <p class="feedback-option">
                     <label class="feedback-label visually-hidden" for="user-password">Пароль</label>
-                    <input class="feedback-field" id="user-password" type="password" name="password" value="" placeholder="Пароль">
+                    <input class="feedback-field" id="user-password" type="password" name="password" value="" placeholder="Пароль" required>
                 </p>
             </div>
             <div class="filter-checkbox">

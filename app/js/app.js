@@ -46,6 +46,7 @@ const close = document.querySelector(".popup-close");//кнопка закрыт
 const form = popup.querySelector("form"); //вся форма
 const login = popup.querySelector("[name=login]");
 const password = popup.querySelector("[name=password]");
+const modalButton = document.querySelector('.modal-button');
 
 let isStorageSupport = true;
 let storage = "";
@@ -73,6 +74,22 @@ close.addEventListener("click", function (evt) {
     popup.classList.remove("modal-show");
     popup.classList.remove("modal-error");
 });
+
+modalButton.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("modal-show");
+    popup.classList.remove("modal-error");
+
+    if (login.value === '' || login.value == null) {
+        alert('Ведите свой login');
+        console.log('Ведите свой login')
+    }
+
+    if (password.value.length <= 6) {
+        alert('Пароль должен быть больше 6 символов')
+        console.log('Пароль должен быть больше 6 символов')
+    }
+})
 
 form.addEventListener("submit", function (evt) {
     if (!login.value || !password.value){
@@ -103,31 +120,32 @@ window.addEventListener("keydown", function (evt) {
  * 3. localStorage урок 2.0
  */
 
-console.log(login);
-console.log(password);
-const authorizedName = document.querySelector('#authorized');//поле куда выводится Логин
 
+const authorizedName = document.querySelector('.main-nav__authorized');//див над инпутом
+const authorizedOut = document.querySelector('.main-nav__authorized-out'); //инпут
 
 function output() {
     let loginData = login.value;
-    let passwordData = password.value;
-    login.value = '';
-    // authorizedName.textContent = loginData;
+    //let passwordData = password.value;
     localStorage.setItem('login', loginData);
 
-
     let inf = localStorage.getItem('login');
-
-    let out = document.querySelector('.main-nav__authorized-out');
-    out.append(inf);
-    out.value = ' ';
-}
-
-function updateData () {
-
-}
-document.querySelector(".modal-button").onclick = output;
-window.onload = function() {
-    updateData();
+    authorizedName.innerHTML = inf;
 };
+
+authorizedName.addEventListener('click', function () {
+    authorizedOut.value = authorizedName.innerHTML
+});
+debugger;
+
+authorizedOut.addEventListener('change', function () {
+    authorizedName.innerText = authorizedOut.value;
+});
+debugger
+
+
+document.querySelector(".modal-button").onclick = output;
+// window.onload = function() {
+//     updateData();
+// };
 

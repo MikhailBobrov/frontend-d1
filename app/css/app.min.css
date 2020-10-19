@@ -288,12 +288,10 @@ input[type=radio].visually-hidden {
   margin-top: 20px
 }
 .main-nav__authorized {
-  display: block;
-  background-color: transparent
+  display: block
 }
 .main-nav__authorized-out {
   border: none;
-  background-color: transparent;
   outline: 0
 }
 .button-out {
