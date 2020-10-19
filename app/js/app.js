@@ -143,14 +143,14 @@ loginView.addEventListener('click', function () {
 
 
 loginInput.addEventListener('change', function () {
-    loginInput.innerText = loginInput.value;
+    let loginData = loginInput.value;
+    localStorage.setItem('login', loginData);
+    updateData();
     loginInput.classList.remove('main-nav__authorized-outoblock');
     loginView.classList.remove('main-nav__authorizedout');
 });
 
 function updateData () {
-    let loginData = login.value;
-    localStorage.setItem('login', loginData);
     let info = localStorage.getItem('login');
     loginView.innerHTML = info;
     loginInput.value = info;
