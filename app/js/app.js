@@ -47,6 +47,7 @@ const form = popup.querySelector("form"); //вся форма
 const login = popup.querySelector("[name=login]");
 const password = popup.querySelector("[name=password]");
 const modalButton = document.querySelector('.modal-button');
+const navButton = document.querySelector('.main-nav__button');
 
 let isStorageSupport = true;
 let storage = "";
@@ -126,7 +127,6 @@ const loginInput = document.querySelector('.main-nav__authorized-out'); //инп
 
 function output() {
     let loginData = login.value;
-    //let passwordData = password.value;
     localStorage.setItem('login', loginData);
 
     let inf = localStorage.getItem('login');
@@ -138,7 +138,7 @@ document.querySelector(".modal-button").onclick = output;
 loginView.addEventListener('click', function () {
     loginInput.classList.add('main-nav__authorized-outoblock');
     loginInput.value = loginView.innerHTML;
-    this.classList.add('main-nav__authorizedout')
+    this.classList.add('main-nav__authorizedout');
 });
 
 
@@ -154,6 +154,12 @@ function updateData () {
     let info = localStorage.getItem('login');
     loginView.innerHTML = info;
     loginInput.value = info;
+
+    if (loginInput.value === '') {
+        navButton.innerHTML = 'Вход'
+    } else {
+        navButton.innerHTML = 'Выход'
+    }
 }
 
 window.onload = function() {

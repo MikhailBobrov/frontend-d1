@@ -3,7 +3,7 @@
 }
 
 .main-nav__input {
-  width: 227px;
+  width: 225px;
   border: none;
   border-bottom: 1px solid #333333;
 }
@@ -11,6 +11,7 @@
 .main-nav__label {
   color: red;
   font-size: 16px;
+  font-weight: 500;
 }
 
 .main-nav__button {
@@ -19,6 +20,10 @@
 
 .main-nav__authorized {
   display: block;
+  padding-top: 20px;
+  color: var(--basic-black);
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .main-nav__authorizedout {
@@ -29,6 +34,10 @@
   border: none;
   display: none;
   outline: none;
+  padding-top: 20px;
+  color: var(--basic-black);
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .main-nav__authorized-outoblock {
@@ -41,4 +50,44 @@
 
 .button-on {
   display: block;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-nav__label {
+    padding-left: 15px;
+  }
+
+  .main-nav__button {
+    margin-top: 0;
+  }
+
+  .main-nav__input {
+    width: 170px;
+  }
+
+  .main-nav__authorized {
+    padding-top: 10px;
+  }
+
+  .main-nav__authorized-out {
+    padding-top: 10px;
+    color: var(--basic-black);
+    font-weight: 500;
+  }
+
+  .main-nav__authorizedout {
+
+  }
+
+  .main-nav__authorized-outoblock {
+    max-width: 145px;
+    padding-top: 15px;
+
+  }
 }
