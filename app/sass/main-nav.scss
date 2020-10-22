@@ -82,9 +82,6 @@
     font-weight: 500;
   }
 
-  .main-nav__authorizedout {
-
-  }
 
   .main-nav__authorized-outoblock {
     max-width: 135px;
@@ -94,6 +91,44 @@
 }
 
 @media (min-width: 1260px) {
+  .main-nav {
+    width: 100%;
+  }
+
+  .main-nav__logo {
+    margin-right: 173px;
+  }
+
+  .main-nav__form {
+    margin-right: 159px;
+  }
+
+  .main-nav__input {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 0;
+    padding-bottom: 1px;
+    width: 319px;
+    font-family: "Rubik", "Arial", sans-serif;
+  }
+
+  .main-nav__label {
+    color: red;
+    font-size: 16px;
+    font-weight: 500;
+    padding-left: 30px;
+  }
+
+  .main-nav__authorized {
+    width: 126px;
+    padding-left: 10px;
+  }
+
+  .main-nav__button {
+    padding-left: 0;
+    padding-right: 0;
+    width: 40px;
+  }
 
 }
 

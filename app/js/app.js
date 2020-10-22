@@ -156,9 +156,10 @@ function updateData () {
     loginInput.value = info;
 
     if (loginInput.value === '') {
-        navButton.innerHTML = 'Вход'
+        navButton.innerHTML = 'Войти'
+        navButton.style.width = 113 + 'px';
     } else {
-        navButton.innerHTML = 'Выход'
+        navButton.innerHTML = 'Выйти'
         navButton.style.backgroundColor = 'transparent';
         navButton.style.color = 'red';
         navButton.style.fontWeight = 'bold';
