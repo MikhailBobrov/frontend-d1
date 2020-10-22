@@ -159,6 +159,9 @@ function updateData () {
         navButton.innerHTML = 'Вход'
     } else {
         navButton.innerHTML = 'Выход'
+        navButton.style.backgroundColor = 'transparent';
+        navButton.style.color = 'red';
+        navButton.style.fontWeight = 'bold';
     }
 }
 

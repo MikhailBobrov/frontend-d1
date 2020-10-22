@@ -76,7 +76,8 @@
   }
 
   .main-nav__authorized-out {
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-left: 0;
     color: var(--basic-black);
     font-weight: 500;
   }
@@ -86,8 +87,14 @@
   }
 
   .main-nav__authorized-outoblock {
-    max-width: 145px;
+    max-width: 135px;
     padding-top: 15px;
-
+    padding-left: 0;
   }
 }
+
+@media (min-width: 1260px) {
+
+}
+
+
