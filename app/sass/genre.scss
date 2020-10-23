@@ -139,3 +139,35 @@
   }
 }
 
+@media (min-width: 1260px) {
+  .genre {
+    width: 1260px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .genre__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-top: 10px;
+    list-style: none;
+    position: relative;
+  }
+
+  .genre__title {
+    margin-top: 7px;
+    padding-left: 0;
+  }
+
+  .genre__item {
+    margin-right: 19px;
+  }
+
+  .genre__item:last-child {
+    margin-right: 0;
+  }
+}
+
