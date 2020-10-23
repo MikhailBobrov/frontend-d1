@@ -15,7 +15,8 @@
 }
 
 .main-nav__button {
-  margin-top: 20px;
+  width: 85px;
+  padding-left: 0;
 }
 
 .main-nav__authorized {
@@ -24,10 +25,16 @@
   color: var(--basic-black);
   font-weight: 500;
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .main-nav__authorizedout {
   display: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .main-nav__authorized-out {
@@ -38,6 +45,7 @@
   color: var(--basic-black);
   font-weight: 500;
   font-size: 16px;
+
 }
 
 .main-nav__authorized-outoblock {
@@ -127,7 +135,8 @@
   .main-nav__button {
     padding-left: 0;
     padding-right: 0;
-    width: 40px;
+    width: 51px;
+    margin-left: -21px;
   }
 
 }

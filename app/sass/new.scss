@@ -58,9 +58,9 @@
   position: relative;
   width: 100%;
   height: auto;
-  transform: scale(1.0);
-  bottom: 7px;
-  transition: .5s;
+  //transform: scale(1.0);
+  //bottom: 7px;
+  //transition: .5s;
 }
 
 .new__item:hover .new__item-link img {
@@ -151,9 +151,9 @@
     position: relative;
     width: 280px;
     height: auto;
-    transform: scale(1.0);
-    bottom: 7px;
-    transition: .5s;
+    //transform: scale(1.0);
+    //bottom: 7px;
+    //transition: .5s;
   }
 
   .new__item .new__item-text {
@@ -167,6 +167,95 @@
     opacity: 0;
     transition: .5s;
     border-radius: 7px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .new {
+    width: 1260px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .new__title {
+    position: relative;
+    margin: 0;
+    margin-top: 33px;
+    padding-left: 31px;
+  }
+
+  .new__title::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 27px;
+    min-height: 25px;
+    background-image: url("../images/src/fire.svg");
+  }
+
+  .new__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-top: -26px;
+    position: relative;
+  }
+
+  .new__item > p {
+    width: 273px;
+    font-size: 20px;
+  }
+
+  .new__item {
+    padding: 0;
+    margin-top: 42px;
+    margin-right: 19px;
+    max-width: 30rem;
+    position: relative;
+  }
+
+  .new__item:last-child {
+    margin-right: 0;
+  }
+
+  .new__item .new__item-link img {
+    position: relative;
+    width: 280px;
+    height: auto;
+    //transform: scale(1.0);
+    //bottom: 7px;
+    //transition: .5s;
+  }
+
+  .new__item .new__item-text {
+    position: absolute;
+    width: 278px;
+    height: 369px;
+    top: 0;
+    left: 0;
+    text-align: left;
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: .5s;
+    border-radius: 7px;
+  }
+
+  .new__item:hover .new__item-text {
+    top: 0;
+    left: 1px;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .new__item .new__item-text p {
+    font-size: 16px;
+    margin: 0 0 20px 0;
+    padding: 14px 18px;
+    line-height: 1.4;
   }
 }
 

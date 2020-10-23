@@ -18,9 +18,37 @@
   background-color: transparent;
   cursor: pointer;
   outline: none;
+  width: 116px;
 }
 
-.content__active {
+.content__active:active,
+.content__active:focus {
   color: var(--basic-red);
-  border-bottom: 1px solid var(--basic-red);
+  border-bottom: 2px solid var(--basic-red);
+}
+
+@media (min-width: 1260px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content__container {
+    margin-top: 41px;
+    margin-bottom: 10px;
+    width: 400px;
+    padding-left: 43px;
+    padding-right: 20px;
+  }
+
+  .content__con {
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 24px;
+    margin-left: 0;
+    width: 172px;
+    font-size: 28px;
+  }
+
 }
