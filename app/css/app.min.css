@@ -878,6 +878,82 @@ input[type=radio].visually-hidden {
   .genre__item:last-child {
     margin-right: 0
   }
+  .genre__item--comedy::before {
+    content: "Комедии";
+    position: absolute;
+    top: 163px;
+    left: 100px;
+    width: 100%;
+    min-height: 60px;
+    color: var(--basic-white)
+  }
+  .genre__item--comedy::after {
+    content: "";
+    position: absolute;
+    top: 82px;
+    left: 114px;
+    width: 48px;
+    min-height: 49px;
+    background-image: url(../images/src/happy-smyle.svg);
+    background-repeat: no-repeat
+  }
+  .genre__item--dram::before {
+    content: "Драмы";
+    position: absolute;
+    top: 163px;
+    left: 111px;
+    width: 100%;
+    min-height: 60px;
+    color: var(--basic-white)
+  }
+  .genre__item--dram::after {
+    content: "";
+    position: absolute;
+    top: 82px;
+    left: 114px;
+    width: 48px;
+    min-height: 49px;
+    background-image: url(../images/src/cry-smile.svg);
+    background-repeat: no-repeat
+  }
+  .genre__item--fantastic::before {
+    content: "Фантастика";
+    position: absolute;
+    top: 163px;
+    left: 88px;
+    width: 100%;
+    min-height: 60px;
+    color: var(--basic-white)
+  }
+  .genre__item--fantastic::after {
+    content: "";
+    position: absolute;
+    top: 82px;
+    left: 114px;
+    width: 48px;
+    min-height: 49px;
+    background-image: url(../images/src/alien.svg);
+    background-repeat: no-repeat
+  }
+  .genre__item--scary::before {
+    content: "Ужасы";
+    position: absolute;
+    top: 163px;
+    left: 112px;
+    width: 100%;
+    min-height: 60px;
+    color: var(--basic-white)
+  }
+  .genre__item--scary::after {
+    content: "";
+    position: absolute;
+    top: 82px;
+    left: 114px;
+    width: 48px;
+    min-height: 49px;
+    background-image: url(../images/src/scary-movie.svg);
+    background-repeat: no-repeat
+  }
 }
 .main-footer {
   background-color: #f2f2f2
@@ -917,6 +993,65 @@ input[type=radio].visually-hidden {
   font-weight: 500;
   color: #1f4766;
   font-style: normal
+}
+@media (min-width:768px) {
+  .contacts {
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+  .contacts__adress {
+    margin-bottom: 0;
+    font-size: 12px;
+    padding-left: 10px;
+    color: var(--basic-black)
+  }
+  .main-footer__logo {
+    padding-top: 18px;
+    width: 32px;
+    height: 64px;
+    -o-object-fit: contain;
+    object-fit: contain
+  }
+  .contacts__phone {
+    padding-left: 10px;
+    font-size: 12px;
+    color: var(--basic-black);
+    margin-bottom: 10px
+  }
+}
+@media (min-width:1260px) {
+  .contacts {
+    width: 1260px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 60px
+  }
+  .contacts__adress {
+    margin-bottom: 0;
+    font-size: 16px;
+    padding-left: 40px;
+    color: var(--basic-black)
+  }
+  .contacts__phone {
+    padding-left: 40px;
+    font-size: 16px;
+    color: var(--basic-black);
+    margin-bottom: 10px
+  }
+  .contacts__site {
+    padding-top: 4px;
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1f4766;
+    font-style: normal
+  }
 }
 .channels {
   margin: 0 auto;
@@ -1041,6 +1176,92 @@ input[type=radio].visually-hidden {
     width: 1260px;
     padding-left: 40px;
     padding-right: 40px
+  }
+  .channels-list {
+    margin-top: 36px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around
+  }
+  .channels-list__item {
+    border-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 16px
+  }
+  .first__channel {
+    padding-right: 15px;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+    background-color: #f2f2f2
+  }
+  .first__channel--one {
+    padding-left: 179px;
+    padding-top: 16px
+  }
+  .two-of-two {
+    width: 114px;
+    height: 65px
+  }
+  .first__channel--two {
+    padding-left: 149px;
+    padding-top: 21px
+  }
+  .first__channel--three {
+    padding-left: 149px;
+    padding-top: 35px
+  }
+  .rbc {
+    width: 114px;
+    height: 65px
+  }
+  .first__channel--four {
+    padding-left: 149px;
+    padding-top: 47px
+  }
+  .amedia {
+    width: 114px;
+    height: 65px
+  }
+  .first__channel-menu {
+    margin-left: 165px
+  }
+  .first__channel-menu-content {
+    width: 406px
+  }
+  .first__channel-menu-time {
+    width: 100px;
+    padding-right: 12px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--basic-black);
+    text-align: left;
+    cursor: pointer
+  }
+  .first__channel-menu-program {
+    width: 300px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--basic-black);
+    margin: 0;
+    padding-right: 10px;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: auto;
+    white-space: normal;
+    cursor: pointer
+  }
+  .first__channel-block {
+    margin-bottom: 0
   }
 }
 .tabs__item {

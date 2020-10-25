@@ -40,4 +40,68 @@
   font-style: normal;
 }
 
+@media (min-width: 768px) {
+  .contacts {
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+  }
+
+  .contacts__adress {
+    margin-bottom: 0;
+    font-size: 12px;
+    padding-left: 10px;
+    color: var(--basic-black);
+  }
+
+  .main-footer__logo {
+    padding-top: 18px;
+    width: 32px;
+    height: 64px;
+    object-fit: contain;
+  }
+
+  .contacts__phone {
+    padding-left: 10px;
+    font-size: 12px;
+    color: var(--basic-black);
+    margin-bottom: 10px;
+  }
+}
+
+@media (min-width: 1260px) {
+  .contacts {
+    width: 1260px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 60px;
+  }
+
+  .contacts__adress {
+    margin-bottom: 0;
+    font-size: 16px;
+    padding-left: 40px;
+    color: var(--basic-black);
+  }
+
+  .contacts__phone {
+    padding-left: 40px;
+    font-size: 16px;
+    color: var(--basic-black);
+    margin-bottom: 10px;
+  }
+
+  .contacts__site {
+    padding-top: 4px;
+    padding-left: 40px;
+    padding-right: 10px;
+    padding-bottom: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1F4766;
+    font-style: normal;
+  }
+}
+
 
