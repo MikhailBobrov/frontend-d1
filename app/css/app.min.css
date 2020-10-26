@@ -311,7 +311,7 @@ input[type=radio].visually-hidden {
 }
 .main-nav__button {
   width: 85px;
-  padding-left: 0
+  padding-left: 16px
 }
 .main-nav__authorized {
   display: block;
@@ -417,7 +417,7 @@ input[type=radio].visually-hidden {
   .main-nav__button {
     padding-left: 0;
     padding-right: 0;
-    width: 51px;
+    width: 113px;
     margin-left: -21px
   }
 }
@@ -1203,9 +1203,13 @@ input[type=radio].visually-hidden {
     align-self: center;
     background-color: #f2f2f2
   }
+  .first__channel-menu-header {
+    margin-bottom: 9px
+  }
   .first__channel--one {
     padding-left: 179px;
-    padding-top: 16px
+    padding-top: 16px;
+    padding-right: 50px
   }
   .two-of-two {
     width: 114px;
@@ -1232,13 +1236,14 @@ input[type=radio].visually-hidden {
     height: 65px
   }
   .first__channel-menu {
-    margin-left: 165px
+    margin-left: 123px;
+    padding-bottom: 18px
   }
   .first__channel-menu-content {
-    width: 406px
+    width: 700px
   }
   .first__channel-menu-time {
-    width: 100px;
+    width: 62px;
     padding-right: 12px;
     padding-bottom: 5px;
     font-size: 16px;
@@ -1248,7 +1253,7 @@ input[type=radio].visually-hidden {
     cursor: pointer
   }
   .first__channel-menu-program {
-    width: 300px;
+    width: 600px;
     font-size: 16px;
     font-weight: 400;
     color: var(--basic-black);
@@ -1300,7 +1305,8 @@ input[type=radio].visually-hidden {
   -webkit-animation-name: bounce;
   animation-name: bounce;
   -webkit-animation-duration: .6s;
-  animation-duration: .6s
+  animation-duration: .6s;
+  border-radius: 10px
 }
 .feedback-container {
   margin-bottom: 20px
@@ -1489,5 +1495,21 @@ input[type=radio].visually-hidden {
   80% {
     -webkit-transform: translateX(10px);
     transform: translateX(10px)
+  }
+}
+@media (min-width:1260px) {
+  .modal-show {
+    display: block;
+    top: 185px;
+    left: 50%;
+    margin-left: -148px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 280px;
+    min-height: 390px;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -webkit-animation-duration: .6s;
+    animation-duration: .6s
   }
 }

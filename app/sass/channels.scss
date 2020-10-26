@@ -140,9 +140,14 @@
     background-color: #F2F2F2;
   }
 
+  .first__channel-menu-header {
+    margin-bottom: 9px;
+  }
+
   .first__channel--one {
     padding-left: 179px;
     padding-top: 16px;
+    padding-right: 50px;
   }
 
   .two-of-two {
@@ -176,15 +181,16 @@
   }
 
   .first__channel-menu {
-    margin-left: 165px;
+    margin-left: 123px;
+    padding-bottom: 18px;
   }
 
   .first__channel-menu-content {
-    width: 406px;
+    width: 700px;
   }
 
   .first__channel-menu-time {
-    width: 100px;
+    width: 62px;
     padding-right: 12px;
     padding-bottom: 5px;
     font-size: 16px;
@@ -195,7 +201,7 @@
   }
 
   .first__channel-menu-program {
-    width: 300px;
+    width: 600px;
     font-size: 16px;
     font-weight: normal;
     color: var(--basic-black);
