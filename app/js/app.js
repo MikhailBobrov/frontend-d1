@@ -81,15 +81,15 @@ modalButton.addEventListener('click', function (evt) {
     popup.classList.remove("modal-show");
     popup.classList.remove("modal-error");
 
-    if (login.value === '' || login.value == null) {
-        alert('Ведите свой login');
-        console.log('Ведите свой login')
-    }
-
-    if (password.value.length <= 6) {
-        alert('Пароль должен быть больше 6 символов')
-        console.log('Пароль должен быть больше 6 символов')
-    }
+    // if (login.value === '' || login.value == null) {
+    //     alert('Введите свой login');
+    //     console.log('Введите свой login')
+    // }
+    //
+    // if (password.value.length <= 6) {
+    //     alert('Пароль должен быть больше 6 символов')
+    //     console.log('Пароль должен быть больше 6 символов')
+    // }
 })
 
 form.addEventListener("submit", function (evt) {
@@ -157,7 +157,7 @@ function updateData () {
 
     if (loginInput.value === '') {
         navButton.innerHTML = 'Войти'
-        //navButton.style.width = 113 + 'px';
+
     } else {
         navButton.innerHTML = 'Выйти'
         navButton.style.backgroundColor = 'transparent';
