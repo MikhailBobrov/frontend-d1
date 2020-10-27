@@ -16,18 +16,18 @@ a {
   cursor: pointer;
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-}
-
 html,
 body {
   line-height: 1.5;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
 }
 
 img {
