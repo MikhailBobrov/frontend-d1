@@ -9,6 +9,7 @@
     <title>Document</title>
 </head>
 <body>
+<div class="con">
     <header class="main-header main-header__container">
         <nav class="main-nav">
             <a class="main-nav__logo">
@@ -17,7 +18,7 @@
 
             <form class="main-nav__form" id="main-nav__form" action="#" method="post">
                 <input class="main-nav__input" type="search" name="main-nav__form-name" id="reservation-form-name" placeholder="Поиск...">
-                <label class="main-nav__label" for="reservation-form-name" >Найти</label>
+                <button class="main-nav__label" for="reservation-form-name" >Найти</button>
             </form>
 
             <div class="authorized">
@@ -25,7 +26,8 @@
                 <input type="text" class="main-nav__authorized-out" id="authorized" name="login" value="" placeholder=""></input>
             </div>
 
-            <a class="button main-nav__button button-enter" href="#">Войти</a>
+            <a class="button main-nav__button button__enter" href="#">Войти</a>
+            <a class="button main-nav__button-out" href="#">Выйти</a>
 
         </nav>
     </header>
@@ -274,7 +276,7 @@
             </ul>
         </div>
     </main>
-
+</div>
     <footer class="main-footer">
         <section class="contacts">
             <h2 class="visually-hidden">Наши контакты</h2>

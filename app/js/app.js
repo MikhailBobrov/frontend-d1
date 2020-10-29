@@ -40,7 +40,6 @@ document.querySelector('.content__con:nth-child(2)').click();
  * modal
  */
 
-const link = document.querySelector(".main-nav__button");//кнопка по которой щелкаем чтобы войти
 const popup = document.querySelector('.modal-login');//вся секция попап
 const close = document.querySelector(".popup-close");//кнопка закрытия
 const form = popup.querySelector("form"); //вся форма
@@ -58,7 +57,8 @@ try {
     isStorageSupport = false;
 }
 
-link.addEventListener("click", function (evt) {
+//кликаю по кнопке в навигации - открывается модальное окно
+navButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
 
@@ -70,33 +70,31 @@ link.addEventListener("click", function (evt) {
     }
 });
 
+//кнопка закрытия модального окна
 close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("modal-show");
     popup.classList.remove("modal-error");
 });
 
+//клик по кнопке модального окна - Войти
 modalButton.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    popup.classList.remove("modal-show");
-    popup.classList.remove("modal-error");
-
-    // if (login.value === '' || login.value == null) {
-    //     alert('Введите свой login');
-    //     console.log('Введите свой login')
-    // }
-    //
-    // if (password.value.length <= 6) {
-    //     alert('Пароль должен быть больше 6 символов')
-    //     console.log('Пароль должен быть больше 6 символов')
-    // }
+    if (login.value === '' || login.value == null || password.value.length <= 6) {
+        alert('Введите свой login');
+        console.log('Введите свой login');
+        alert('Пароль должен быть больше 6 символов');
+        console.log('Пароль должен быть больше 6 символов');
+    } else {
+        popup.classList.remove("modal-show");
+        popup.classList.remove("modal-error");
+    }
 })
 
 form.addEventListener("submit", function (evt) {
     if (!login.value || !password.value){
         evt.preventDefault();
         popup.classList.remove("modal-error");
-        popup.offsetWidth = popup.offsetWidth;
+        //popup.offsetWidth = popup.offsetWidth;
         popup.classList.add("modal-error");
     } else {
         if (isStorageSupport) {
@@ -105,6 +103,7 @@ form.addEventListener("submit", function (evt) {
     }
 });
 
+//закрытие по esc
 window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
         if (popup.classList.contains("modal-show")) {
@@ -115,12 +114,6 @@ window.addEventListener("keydown", function (evt) {
     }
 });
 
-/**
- * 1. скачать урок основы ввода данных 2.0
- * 2. скачать урок работам с формами 2.0
- * 3. localStorage урок 2.0
- */
-
 
 const loginView = document.querySelector('.main-nav__authorized');//див над инпутом
 const loginInput = document.querySelector('.main-nav__authorized-out'); //инпут
@@ -128,43 +121,55 @@ const loginInput = document.querySelector('.main-nav__authorized-out'); //инп
 function output() {
     let loginData = login.value;
     localStorage.setItem('login', loginData);
-
     let inf = localStorage.getItem('login');
     loginView.innerHTML = inf;
 };
 
-document.querySelector(".modal-button").onclick = output;
+//идет запись в storage
+modalButton.onclick = output;
 
 loginView.addEventListener('click', function () {
     loginInput.classList.add('main-nav__authorized-outoblock');
     loginInput.value = loginView.innerHTML;
-    this.classList.add('main-nav__authorizedout');
+    this.classList.add('main-nav__authorized-out');
 });
-
 
 loginInput.addEventListener('change', function () {
     let loginData = loginInput.value;
     localStorage.setItem('login', loginData);
     updateData();
     loginInput.classList.remove('main-nav__authorized-outoblock');
-    loginView.classList.remove('main-nav__authorizedout');
+    loginView.classList.remove('main-nav__authorized-out');
 });
-
+//const navButton = document.querySelector('.main-nav__button');
+const btnOut = document.querySelector('.main-nav__button-out');
 function updateData () {
     let info = localStorage.getItem('login');
     loginView.innerHTML = info;
     loginInput.value = info;
 
-    if (loginInput.value === '') {
-        navButton.innerHTML = 'Войти'
-
-    } else {
-        navButton.innerHTML = 'Выйти'
-        navButton.style.backgroundColor = 'transparent';
-        navButton.style.color = 'red';
-        navButton.style.fontWeight = 'bold';
+    if (loginInput.value === '' ||  loginView === '') {
+        //navButton.innerHTML = 'Войти'
+        console.log('НУжнно ввести логин и пароль');
+    } else if (document.querySelector('.main-nav__authorized').textContent !== '') {
+        navButton.classList.remove('button__enter');
+        navButton.classList.add('button__enter-out');
+        btnOut.classList.remove('main-nav__button-out');
+        btnOut.classList.add('button__out');
     }
 }
+
+btnOut.addEventListener('click', function () {
+    btnOut.classList.remove('button__out');
+    btnOut.classList.add('main-nav__button-out');
+    navButton.classList.remove('button__enter-out');
+    navButton.classList.add('button__enter');
+    localStorage.clear();
+    loginInput.value = '';
+    loginInput.classList.remove('main-nav__authorized-outoblock');
+    loginView.classList.remove('main-nav__authorized-out');
+    document.querySelector('.main-nav__authorized').textContent = ''
+})
 
 window.onload = function() {
     updateData();

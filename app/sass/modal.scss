@@ -38,7 +38,7 @@
 
 .modal-error {
   animation-name: shake;
-  animation: shake 0.6s;
+  animation-duration: 1.6s;
 }
 
 .popup-close {
@@ -64,7 +64,15 @@
 }
 
 .modal-button {
+  margin-left: 68px;
+  margin-top: 94px;
   cursor: pointer;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: red;
+  border-radius: 4px;
+  border: none;
 }
 
 .modal h3 {
@@ -122,11 +130,6 @@
   color: #e74246;
 }
 
-.modal-button {
-  margin-left: 68px;
-  margin-top: 94px;
-}
-
 .checkbox-label {
   color: #333333;
   font-size: 16px;
@@ -134,6 +137,7 @@
   padding-left: 25px;
   font-weight: 400;
   line-height: 19px;
+  margin-bottom: 90px;
 }
 
 .checkbox-label::before {
