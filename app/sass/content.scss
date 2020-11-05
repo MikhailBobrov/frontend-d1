@@ -21,6 +21,12 @@
   width: 116px;
 }
 
+.content__active,
+.content__active {
+  color: var(--basic-red);
+  border-bottom: 2px solid var(--basic-red);
+}
+
 .content__active:active,
 .content__active:focus {
   color: var(--basic-red);

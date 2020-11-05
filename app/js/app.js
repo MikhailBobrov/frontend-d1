@@ -3,37 +3,71 @@
  * @type {NodeListOf<Element>}
  * переключение между табами
  */
-const buttons = document.querySelectorAll('.content__con');
-const tabItems = document.querySelectorAll('.tabs__item');
 
-buttons.forEach(elem => {
-    elem.addEventListener('click', function () {
-        let currentBtn = elem;
-        let tabId = elem.getAttribute('data-tab');
-        console.log(tabId);
 
-        let currentTab = document.querySelector(tabId);
-        console.log(currentTab);
 
-        if (!currentBtn.classList.contains('active')) {
-            buttons.forEach(elem=> {
-                elem.classList.remove('active');
-                elem.classList.remove('content__active');
-            })
+window.onload = function () {
+    document.querySelector('.content').addEventListener('click', fTabs);
+    function fTabs(event) {
+        console.log(event)
+        if (event.target.className === 'content__con') {
+            //dataTab - номер вкладки которую нужно отобразить
+            let dataTab = event.target.getAttribute('data-tab');
 
-            tabItems.forEach(elem=> {
-                elem.classList.remove('active')
-            })
+            //отключаю класс content__active у всех табов
+            let tabH = document.querySelectorAll('.content__con');
+            for (let i = 0; i < tabH.length; i++) {
+                 tabH[i].classList.remove('content__active')
+            }
 
-            currentTab.classList.add('active');
-            currentBtn.classList.add('active');
-            currentBtn.classList.add('content__active');
+            event.target.classList.add('content__active')
+            //console.log(typeof dataTab)
+
+            //все вкладки с содержимым
+            let tabBody = document.querySelectorAll('.tabs__item');
+
+            for (let i = 0; i< tabBody.length; i++) {
+                if (dataTab == i) {
+                    tabBody[i].style.display = 'block';
+                }
+                else {
+                    tabBody[i].style.display = 'none';
+                }
+            }
         }
-    })
 
-})
+    }
+    updateData();
+}
 
-document.querySelector('.content__con:nth-child(2)').click();
+// buttons.forEach(elem => {
+//     elem.addEventListener('click', function () {
+//         let currentBtn = elem;
+//         let tabId = elem.getAttribute('data-tab');
+//         console.log(tabId);
+//
+//         let currentTab = document.querySelector(tabId);
+//         console.log(currentTab);
+//
+//         if (!currentBtn.classList.contains('active')) {
+//             buttons.forEach(elem=> {
+//                 elem.classList.remove('active');
+//                 elem.classList.remove('content__active');
+//             })
+//
+//             tabItems.forEach(elem=> {
+//                 elem.classList.remove('active')
+//             })
+//
+//             currentTab.classList.add('active');
+//             currentBtn.classList.add('active');
+//             currentBtn.classList.add('content__active');
+//         }
+//     })
+//
+// })
+// //подумать с этой точкой
+// document.querySelector('.content__con:nth-child(2)').click();
 
 /**
  *
@@ -87,21 +121,30 @@ modalButton.addEventListener('click', function (evt) {
     } else {
         popup.classList.remove("modal-show");
         popup.classList.remove("modal-error");
+
+        if (!login.value || !password.value){
+            evt.preventDefault();
+            popup.classList.remove("modal-error");
+            //popup.offsetWidth = popup.offsetWidth;
+            popup.classList.add("modal-error");
+        } else {
+            if (isStorageSupport) {
+                localStorage.setItem("login", login.value)
+            }
+        }
+
+        // navButton.classList.remove('button__enter');
+        // navButton.classList.add('button__enter-out');
+        // btnOut.classList.remove('main-nav__button-out');
+        // btnOut.classList.add('button__out');
     }
+
+
 })
 
-form.addEventListener("submit", function (evt) {
-    if (!login.value || !password.value){
-        evt.preventDefault();
-        popup.classList.remove("modal-error");
-        //popup.offsetWidth = popup.offsetWidth;
-        popup.classList.add("modal-error");
-    } else {
-        if (isStorageSupport) {
-            localStorage.setItem("login", login.value)
-        }
-    }
-});
+// form.addEventListener("submit", function (evt) {
+//
+// });
 
 //закрытие по esc
 window.addEventListener("keydown", function (evt) {
@@ -123,7 +166,7 @@ function output() {
     localStorage.setItem('login', loginData);
     let inf = localStorage.getItem('login');
     loginView.innerHTML = inf;
-};
+}
 
 //идет запись в storage
 modalButton.onclick = output;
@@ -165,14 +208,14 @@ btnOut.addEventListener('click', function () {
     navButton.classList.remove('button__enter-out');
     navButton.classList.add('button__enter');
     localStorage.clear();
-    loginInput.value = '';
+    // loginInput.value = '';
     loginInput.classList.remove('main-nav__authorized-outoblock');
     loginView.classList.remove('main-nav__authorized-out');
     document.querySelector('.main-nav__authorized').textContent = ''
 })
 
-window.onload = function() {
-    updateData();
-};
+// window.onload = function() {
+//
+// };
 
 

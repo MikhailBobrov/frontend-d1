@@ -493,6 +493,10 @@ input[type=radio].visually-hidden {
   outline: 0;
   width: 116px
 }
+.content__active {
+  color: var(--basic-red);
+  border-bottom: 2px solid var(--basic-red)
+}
 .content__active:active,
 .content__active:focus {
   color: var(--basic-red);
@@ -1315,9 +1319,6 @@ input[type=radio].visually-hidden {
 .tabs__item {
   display: none
 }
-.tabs__item.active {
-  display: block
-}
 .modal {
   position: fixed;
   background-color: #fff;
@@ -1380,8 +1381,9 @@ input[type=radio].visually-hidden {
   opacity: .3
 }
 .modal-button {
+  display: block;
   margin-left: 68px;
-  margin-top: 94px;
+  margin-top: 70px;
   cursor: pointer;
   color: #fff;
   text-align: center;
@@ -1443,8 +1445,7 @@ input[type=radio].visually-hidden {
   position: relative;
   padding-left: 25px;
   font-weight: 400;
-  line-height: 19px;
-  margin-bottom: 90px
+  line-height: 19px
 }
 .checkbox-label::before {
   content: "";

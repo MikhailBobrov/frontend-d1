@@ -64,8 +64,9 @@
 }
 
 .modal-button {
+  display: block;
   margin-left: 68px;
-  margin-top: 94px;
+  margin-top: 70px;
   cursor: pointer;
   color: #ffffff;
   text-align: center;
@@ -137,7 +138,6 @@
   padding-left: 25px;
   font-weight: 400;
   line-height: 19px;
-  margin-bottom: 90px;
 }
 
 .checkbox-label::before {

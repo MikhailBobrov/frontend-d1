@@ -23,7 +23,7 @@
 
             <div class="authorized">
                 <div class="main-nav__authorized" id="userName"></div>
-                <input type="text" class="main-nav__authorized-out" id="authorized" name="login" value="" placeholder=""></input>
+                <input type="text" class="main-nav__authorized-out" id="authorized" name="login" value="" placeholder="">
             </div>
 
             <a class="button main-nav__button button__enter" href="#">Войти</a>
@@ -37,11 +37,11 @@
 
         <section class="content content__container">
             <h2 class="visually-hidden">Категории</h2>
-            <button class="content__con" autofocus data-tab="#tab-1">Фильмы</button>
-            <button class="content__con" data-tab="#tab-2">Телеканалы</button>
+            <button class="content__con content__active" data-tab="0">Фильмы</button>
+            <button class="content__con" data-tab="1">Телеканалы</button>
         </section>
 
-        <div class="films tabs__item" id="tab-1">
+        <div class="films tabs__item" style="display: block" id="tab-1">
             <section class="new">
                 <h2 class="new__title">	Новинки</h2>
                 <ul class="new__list">
@@ -110,7 +110,6 @@
                 </ul>
             </section>
         </div>
-
         <div class="channels tabs__item" id="tab-2">
             <ul class="channels-list">
                 <li class="channels-list__item">
@@ -377,6 +376,7 @@
 
             </ul>
         </div>
+
     </main>
 </div>
     <footer class="main-footer">
