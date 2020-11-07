@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/app.min.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="con">
+    <header class="main-header main-header__container">
+        <nav class="main-nav">
+            <a class="main-nav__logo">
+                <img class="header__logo-image" src="images/src/logo.svg" alt="Иконка логотипа">
+            </a>
+
+            <form class="main-nav__form" id="main-nav__form" action="#" method="post">
+                <input class="main-nav__input" type="search" name="main-nav__form-name" id="reservation-form-name" placeholder="Поиск...">
+                <button class="main-nav__label" for="reservation-form-name" >Найти</button>
+            </form>
+
+            <div class="authorized">
+                <div class="main-nav__authorized" id="userName"></div>
+                <input type="text" class="main-nav__authorized-out" id="authorized" name="login" value="" placeholder="">
+            </div>
+
+            <a class="button main-nav__button button__enter" href="#">Войти</a>
+            <a class="button main-nav__button-out" href="#">Выйти</a>
+
+        </nav>
+    </header>
+    <main>
+
+        <h1 class="visually-hidden">Видеосервис</h1>
+
+        <section class="content content__container">
+            <h2 class="visually-hidden">Категории</h2>
+            <button class="content__con content__active" data-tab="0">Фильмы</button>
+            <button class="content__con" data-tab="1">Телеканалы</button>
+        </section>
+
+        <div class="films tabs__item" style="display: block" id="tab-1">
+            <section class="new">
+                <h2 class="new__title">	Новинки</h2>
+                <ul class="new__list">
+                    <li class="new__item">
+                        <a class="new__item-link">
+                            <img class="new__item-image" src="images/src/cat.jpg" width="280" height="370" alt="Мульт в кино. Выпуск №103. Некогда грустить!">
+                        </a>
+                        <p>Мульт в кино. Выпуск №103. Некогда грустить!</p>
+                        <div class="new__item-text">
+                            <p>Ко́шка, или дома́шняя ко́шка, — домашнее животное, одно из наиболее популярных «животных-компаньонов». С точки зрения научной систематики, домашняя кошка — млекопитающее семейства кошачьих отряда хищных.</p>
+                        </div>
+                    </li>
+                    <li class="new__item">
+                        <a class="new__item-link">
+                            <img src="images/src/betman.jpg" width="280" height="370" alt="Новый Бэтмен">
+                        </a>
+                        <p>Новый Бэтмен</p>
+                        <div class="new__item-text">
+                            <p>Warner Bros. внесла изменения в график ожидаемых релизов. После того как «Дюну» Дени Вильнёва перенесли на 1 октября 2021 года, студии пришлось убрать с этой даты «Бэтмена». Теперь лента Мэтта Ривза ожидается в кинотеатрах 4 марта 2022 года.</p>
+                        </div>
+                    </li>
+                    <li class="new__item">
+                        <a class="new__item-link">
+                            <img src="images/src/holywood.jpg" width="280" height="370" alt="Однажды... в Голливуде">
+                        </a>
+                        <p>Однажды... в Голливуде</p>
+                        <div class="new__item-text">
+                            <p>Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+                        </div>
+                    </li>
+                    <li class="new__item">
+                        <a class="new__item-link">
+                            <img src="images/src/strip.jpg" width="280" height="370" alt="Стриптизёрши">
+                        </a>
+                        <p>Стриптизёрши</p>
+                        <div class="new__item-text">
+                            <p>Танцовщицы элитного стриптиз-клуба, клиенты которого - известные финансисты с Уолл-Стрит - привыкли к большим заработкам и роскошной жизни. </p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="genre">
+                <h2 class="genre__title">Жанры</h2>
+                <ul class="genre__list">
+                    <li class="genre__item genre__item--comedy">
+                        <a class="genre__item-link">
+                            <img src="images/src/Rectangle222.png" alt="папка с файлами">
+                        </a>
+                    </li>
+                    <li class="genre__item genre__item--dram">
+                        <a class="genre__item-link">
+                            <img src="images/src/Rectangle%20-%20red.png" width="280" height="208" alt="папка с файлами">
+                        </a>
+                    </li>
+                    <li class="genre__item genre__item--fantastic">
+                        <a class="genre__item-link">
+                            <img src="images/src/Rectangle%20-%20blue.png" width="280" height="208" alt="папка с файлами">
+                        </a>
+                    </li>
+                    <li class="genre__item genre__item--scary">
+                        <a class="genre__item-link">
+                            <img src="images/src/Rectangle%20-%20grey.png" width="280" height="208" alt="папка с файлами">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+        <div class="channels tabs__item" id="tab-2">
+            <ul class="channels-list">
+                <li class="channels-list__item">
+                    <a class="first__channel first__channel--one">
+                        <img class="first__channel-1" src="images/src/1-ch.png" alt="Первый канал">
+                    </a>
+                    <div class="first__channel-wrapper">
+                        <h2 class="first__channel-menu-header">Первый канал</h2>
+                        <div class="first__channel-menu">
+                            <ul class="first__channel-list">
+                                <li class="first__channel-item">
+                                    <a class="first__channel-link">
+                                        <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                            13:00
+                                        </time>
+                                        <h3 class="first__channel-h3">
+                                            Новости (с субтитрами)
+                                        </h3>
+                                    </a>
+                                </li>
+
+                                <li class="first__channel-item">
+                                    <a class="first__channel-link">
+                                        <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                            14:00
+                                        </time>
+                                        <h3 class="first__channel-h3">
+                                            Давай поженимся
+                                        </h3>
+                                    </a>
+                                </li>
+
+                                <li class="first__channel-item">
+                                    <a class="first__channel-link">
+                                        <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                            15:00
+                                        </time>
+                                        <h3 class="first__channel-h3">
+                                            Другие новости
+                                        </h3>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="channels-list__item">
+                    <a class="first__channel first__channel--two">
+                        <img class="first__channel-1 two-of-two" src="images/src/22channel.png" alt="2x2">
+                    </a>
+                    <div class="first__channel-wrapper">
+                    <h2 class="first__channel-menu-header">2x2</h2>
+                    <div class="first__channel-menu">
+                        <ul class="first__channel-list">
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        13:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        МУЛЬТ ТВ. Сезон 4, 7 серия
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        14:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        15:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        БУРДАШЕВ. Сезон 1, 20 серия
+                                    </h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </li>
+
+                <li class="channels-list__item">
+                    <a class="first__channel first__channel--three">
+                        <img class="first__channel-1 rbc" src="images/src/rbc.png" alt="РБК">
+                    </a>
+                    <div class="first__channel-wrapper">
+                    <h2 class="first__channel-menu-header">РБК</h2>
+                    <div class="first__channel-menu">
+                        <ul class="first__channel-list">
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        13:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        14:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        ДЕНЬ. Главные темы
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        15:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        Главные новости
+                                    </h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </li>
+
+                <li class="channels-list__item">
+                    <a class="first__channel first__channel--four">
+                        <img class="first__channel-1 amedia" src="images/src/Amedia.png" alt="AMEDIA PREMIUM">
+                    </a>
+                    <div class="first__channel-wrapper">
+                    <h2 class="first__channel-menu-header">AMEDIA PREMIUM</h2>
+                    <div class="first__channel-menu">
+                        <ul class="first__channel-list">
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        13:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        Клиент всегда мёртв
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        14:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        Голодные игры: Сойка-пересмешница. Часть I
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        15:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        Секс в большом городе
+                                    </h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </li>
+
+
+
+                <li class="channels-list__item">
+                    <a class="first__channel first__channel--two">
+                        <img class="first__channel-1 two-of-two" src="images/src/22channel.png" alt="2x2">
+                    </a>
+                    <div class="first__channel-wrapper">
+                    <h2 class="first__channel-menu-header">2x2</h2>
+                    <div class="first__channel-menu">
+                        <ul class="first__channel-list">
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        13:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        МУЛЬТ ТВ. Сезон 4, 7 серия
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        14:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        15:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        БУРДАШЕВ. Сезон 1, 20 серия
+                                    </h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </li>
+
+                <li class="channels-list__item">
+                    <a class="first__channel first__channel--three">
+                        <img class="first__channel-1 rbc" src="images/src/rbc.png" alt="РБК">
+                    </a>
+                    <div class="first__channel-wrapper">
+                    <h2 class="first__channel-menu-header">РБК</h2>
+                    <div class="first__channel-menu">
+                        <ul class="first__channel-list">
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        13:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        14:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        ДЕНЬ. Главные темы
+                                    </h3>
+                                </a>
+                            </li>
+                            <li class="first__channel-item">
+                                <a class="first__channel-link">
+                                    <time class="first__channel-time" datetime="2020-11-24T13:00:00">
+                                        15:00
+                                    </time>
+                                    <h3 class="first__channel-h3">
+                                        Главные новости
+                                    </h3>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+
+    </main>
+</div>
+    <footer class="main-footer">
+        <section class="contacts">
+            <h2 class="visually-hidden">Наши контакты</h2>
+
+            <a class="main-footer__logo">
+                <img src="images/src/htc-cs-logo.svg" alt="иконка логотипа">
+            </a>
+
+            <div class="main-footer__copyright copyright">
+                <p class="contacts__adress">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+                <a class="contacts__phone" id="phone" href="tel:+7 (3412) 93-88-61, 43-29-29">+7 (3412) 93-88-61, 43-29-29</a>
+                <address class="contacts__site">
+                    <a href="htc-cs.ru">htc-cs.ru</a>
+                </address>
+            </div>
+        </section>
+    </footer>
+
+    <section class="modal modal-login">
+        <h3>Вход</h3>
+        <form class="feedback-form" action="#" method="post">
+            <div class="feedback-container">
+                <p class="feedback-option">
+                    <label class="feedback-label visually-hidden" for="user-login">Логин</label>
+                    <input class="feedback-field" id="user-login" type="text" name="login" value="" placeholder="Логин" required>
+                </p>
+                <p class="feedback-option">
+                    <label class="feedback-label visually-hidden" for="user-password">Пароль</label>
+                    <input class="feedback-field" id="user-password" type="password" name="password" value="" placeholder="Пароль" required>
+                </p>
+            </div>
+            <div class="filter-checkbox">
+                <input class="visually-hidden checkbox-input" type="checkbox" name="filters-form" id="filters-form" checked value="remember">
+                <label class="checkbox-label" for="filters-form">Запомнить</label>
+            </div>
+            <a class="button modal-button" href="#">Войти</a>
+        </form>
+        <button class="popup-close" type="button">
+            <span class="visually-hidden">Закрыть</span>
+        </button>
+    </section>
+
+<script src="js/app.min.js"></script>
+</body>
+</html>
