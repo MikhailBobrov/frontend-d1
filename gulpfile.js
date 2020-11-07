@@ -69,28 +69,28 @@ function images() {
 }
 
 //npm i --save-dev gulp-webp
-// const webp = require('gulp-webp');
-//
-// function webP() {
-//     return src('app/images/src/**/*.{png,jpg}')
-//         .pipe(webp({quality: 90}))
-//         .pipe(dest("app/images/dest"));
-// }
+const webp = require('gulp-webp');
+
+function webP() {
+    return src('app/images/src/**/*.{png,jpg}')
+        .pipe(webp({quality: 90}))
+        .pipe(dest("app/images/dest"));
+}
 
 // npm i --save-dev gulp-svgstore
 // npm i --save-dev gulp-rename
 
-// const svgstore = require("gulp-svgstore");
-// const rename = require("gulp-rename");
-//
-// function sprite() {
-//     return src("app/images/src/icon-*.svg")
-//         .pipe(svgstore({
-//             inlineSvg: true
-//         }))
-//         .pipe(rename("sprite.svg"))
-//         .pipe(dest("app/images/dest"));
-// }
+const svgstore = require("gulp-svgstore");
+const rename = require("gulp-rename");
+
+function sprite() {
+    return src("app/images/src/icon-*.svg")
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
+        .pipe(rename("sprite.svg"))
+        .pipe(dest("app/images/dest"));
+}
 
 function cleanimg() {
     return del('app/images/dest/**/*', { force: true }) // Удаляем всё содержимое папки "app/images/dest/"
@@ -119,8 +119,8 @@ function startWatch() {
     watch('app/**/*.html').on('change', browserSync.reload);
     // Мониторим папку-источник изображений и выполняем images(), если есть изменения
     watch('app/images/src/**/*', images);
-    // watch('app/images/src/**/*', webP);
-    // watch('app/images/src/**/*', sprite);
+    watch('app/images/src/**/*', webP);
+    watch('app/images/src/**/*', sprite);
 }
 
 
@@ -128,8 +128,8 @@ exports.browsersync = browsersync;
 exports.scripts     = scripts;
 exports.styles      = styles;
 exports.images      = images;
-// exports.webP        = webP;
-// exports.sprite      = sprite;
+exports.webP        = webP;
+exports.sprite      = sprite;
 exports.cleanimg    = cleanimg;
 exports.build       = series(cleandist, styles, scripts, images, buildcopy);
 

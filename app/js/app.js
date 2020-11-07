@@ -132,11 +132,6 @@ modalButton.addEventListener('click', function (evt) {
                 localStorage.setItem("login", login.value)
             }
         }
-
-        // navButton.classList.remove('button__enter');
-        // navButton.classList.add('button__enter-out');
-        // btnOut.classList.remove('main-nav__button-out');
-        // btnOut.classList.add('button__out');
     }
 
 
