@@ -122,24 +122,23 @@ modalButton.addEventListener('click', function (evt) {
         popup.classList.remove("modal-show");
         popup.classList.remove("modal-error");
 
-        if (!login.value || !password.value){
-            evt.preventDefault();
-            popup.classList.remove("modal-error");
-            //popup.offsetWidth = popup.offsetWidth;
-            popup.classList.add("modal-error");
-        } else {
-            if (isStorageSupport) {
-                localStorage.setItem("login", login.value)
-            }
-        }
     }
 
 
 })
 
-// form.addEventListener("submit", function (evt) {
-//
-// });
+form.addEventListener("submit", function (evt) {
+    if (!login.value || !password.value){
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        //popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+    } else {
+        if (isStorageSupport) {
+            localStorage.setItem("login", login.value)
+        }
+    }
+});
 
 //закрытие по esc
 window.addEventListener("keydown", function (evt) {

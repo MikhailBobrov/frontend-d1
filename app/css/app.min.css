@@ -457,6 +457,12 @@ input[type=radio].visually-hidden {
     overflow: visible;
     white-space: unset
   }
+  .main-nav__authorized-outoblock {
+    max-width: 149px;
+    padding-top: 0;
+    padding-left: 45px;
+    margin-top: -21px
+  }
   .main-nav__button {
     margin-left: -21px
   }
